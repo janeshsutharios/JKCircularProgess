@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLO-mm-DcG">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JKCircularProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcV-P6-scx">
+                                <rect key="frame" x="129.5" y="460" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EZJ-od-RcV"/>
+                                </constraints>
+                                <state key="normal" title="Circulate"/>
+                                <connections>
+                                    <action selector="tapsDrawCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F6p-4v-y4W"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-Em-dfg" customClass="JKCircleView" customModule="JKCircularProgress" customModuleProvider="target">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Rlf-xq-n8w"/>
+                                    <constraint firstAttribute="height" constant="200" id="bDE-l4-Gyl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbc-pe-OfV">
+                                <rect key="frame" x="198" y="100" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next Example"/>
+                                <connections>
+                                    <action selector="tapsOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEi-rq-JDv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WcV-P6-scx" secondAttribute="bottom" constant="78" id="HEM-mQ-DWB"/>
+                            <constraint firstItem="WcV-P6-scx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XHt-OC-toH"/>
+                            <constraint firstItem="aCM-Em-dfg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g9U-1S-vJd"/>
+                            <constraint firstItem="aCM-Em-dfg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ram-DN-oUo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="th4-SX-w72"/>
+                    <connections>
+                        <outlet property="customJKView" destination="aCM-Em-dfg" id="Ngi-To-7LU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1636.875" y="-28.52112676056338"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="pMm-nV-xc9">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yFF-DY-fDK" customClass="SecondViewController" customModule="JKCircularProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAE-BR-6TD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVC-B5-Vyk" customClass="JKCircleView" customModule="JKCircularProgress" customModuleProvider="target">
+                                <rect key="frame" x="50" y="106" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="C1l-Aq-sJd"/>
+                                    <constraint firstAttribute="height" constant="100" id="Lg4-RE-N3W"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTA-lI-HNc" customClass="JKCircleView" customModule="JKCircularProgress" customModuleProvider="target">
+                                <rect key="frame" x="215" y="106" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XSR-c1-7QX"/>
+                                    <constraint firstAttribute="width" constant="100" id="aZn-OZ-4nh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OC7-3B-APr" customClass="JKCircleView" customModule="JKCircularProgress" customModuleProvider="target">
+                                <rect key="frame" x="110" y="304" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jme-8e-QL7"/>
+                                    <constraint firstAttribute="width" constant="100" id="tYN-Eh-nEB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BTA-lI-HNc" firstAttribute="top" secondItem="bFx-Te-ssY" secondAttribute="top" constant="86" id="5yX-il-lON"/>
+                            <constraint firstItem="OC7-3B-APr" firstAttribute="centerX" secondItem="EAE-BR-6TD" secondAttribute="centerX" id="7ik-ZJ-kTV"/>
+                            <constraint firstItem="bFx-Te-ssY" firstAttribute="trailing" secondItem="BTA-lI-HNc" secondAttribute="trailing" constant="5" id="GuT-uP-oor"/>
+                            <constraint firstItem="gVC-B5-Vyk" firstAttribute="top" secondItem="bFx-Te-ssY" secondAttribute="top" constant="86" id="dCj-SJ-fLo"/>
+                            <constraint firstItem="OC7-3B-APr" firstAttribute="centerY" secondItem="EAE-BR-6TD" secondAttribute="centerY" constant="70" id="iSO-Gf-O3h"/>
+                            <constraint firstItem="gVC-B5-Vyk" firstAttribute="leading" secondItem="bFx-Te-ssY" secondAttribute="leading" constant="50" id="nYU-uA-cp3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bFx-Te-ssY"/>
+                    </view>
+                    <connections>
+                        <outlet property="halfCircleView" destination="OC7-3B-APr" id="Lpt-gW-h2V"/>
+                        <outlet property="repeatView" destination="BTA-lI-HNc" id="iJo-5Z-FGY"/>
+                        <outlet property="staticView" destination="gVC-B5-Vyk" id="gI8-c4-z9c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6r-H3-lT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-810" y="-17.95774647887324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ffx-yD-OS0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QLO-mm-DcG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QM4-zJ-yvg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZZC-9I-Mpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xct-h5-TiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2415" y="-29"/>
+        </scene>
+    </scenes>
+</document>
