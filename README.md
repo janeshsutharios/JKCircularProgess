@@ -1,8 +1,13 @@
 # JKCircularProgess
 JKCircularProgess for showing circular animated progress
 
+
+<p align="center"><img src="https://media.giphy.com/media/3ohc0UXM2jmMctzClq/giphy.gif" width="360" height="720"/></p>
+
 ## Features
+ - You can select half circle, full circle or as per your use case angle.
  - It's customisable using **`@IBInspectable`**
+ 
  
 You can select Line width, Animation duration, Track color & circleColor from the Attribute inspector
 
