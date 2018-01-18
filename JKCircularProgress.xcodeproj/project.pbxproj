@@ -294,7 +294,7 @@
 				DEVELOPMENT_TEAM = 5DN4DUTMMX;
 				INFOPLIST_FILE = JKCircularProgress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.abh.abhapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Janesh.JKCircularProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fee03964-d6bc-4985-805e-9d198c21c941";
 				PROVISIONING_PROFILE_SPECIFIER = ABHTest1;
@@ -311,7 +311,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JKCircularProgress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.abh.abhapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Janesh.JKCircularProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

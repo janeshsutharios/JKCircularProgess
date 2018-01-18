@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     @IBAction func tapsDrawCircle(_ sender: UIButton) {
         addFullCircleView()
     }
-///angle = 1 is 360 degree, angle = 0.5 is 180 degree --set as your use case 0 < angle <1
+    ///angle = 1 is 360 degree, angle = 0.5 is 180 degree --set as your use case 0 < angle <1
     func addFullCircleView() {
         customJKView.animateCircle(angle: 1)
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLO-mm-DcG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QLO-mm-DcG">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +14,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JKCircularProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rnM-oQ-caO"/>
+                        <viewControllerLayoutGuide type="bottom" id="bEG-SV-0gE"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,12 +64,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WcV-P6-scx" secondAttribute="bottom" constant="78" id="HEM-mQ-DWB"/>
+                            <constraint firstItem="bEG-SV-0gE" firstAttribute="top" secondItem="WcV-P6-scx" secondAttribute="bottom" constant="78" id="HEM-mQ-DWB"/>
                             <constraint firstItem="WcV-P6-scx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XHt-OC-toH"/>
                             <constraint firstItem="aCM-Em-dfg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g9U-1S-vJd"/>
                             <constraint firstItem="aCM-Em-dfg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ram-DN-oUo"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="th4-SX-w72"/>
                     <connections>
@@ -80,6 +83,10 @@
         <scene sceneID="pMm-nV-xc9">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yFF-DY-fDK" customClass="SecondViewController" customModule="JKCircularProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BxI-K5-zWl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ftd-C1-Nye"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EAE-BR-6TD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,14 +118,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BTA-lI-HNc" firstAttribute="top" secondItem="bFx-Te-ssY" secondAttribute="top" constant="86" id="5yX-il-lON"/>
+                            <constraint firstItem="BTA-lI-HNc" firstAttribute="top" secondItem="BxI-K5-zWl" secondAttribute="bottom" constant="86" id="5yX-il-lON"/>
                             <constraint firstItem="OC7-3B-APr" firstAttribute="centerX" secondItem="EAE-BR-6TD" secondAttribute="centerX" id="7ik-ZJ-kTV"/>
-                            <constraint firstItem="bFx-Te-ssY" firstAttribute="trailing" secondItem="BTA-lI-HNc" secondAttribute="trailing" constant="5" id="GuT-uP-oor"/>
-                            <constraint firstItem="gVC-B5-Vyk" firstAttribute="top" secondItem="bFx-Te-ssY" secondAttribute="top" constant="86" id="dCj-SJ-fLo"/>
+                            <constraint firstAttribute="trailing" secondItem="BTA-lI-HNc" secondAttribute="trailing" constant="5" id="GuT-uP-oor"/>
+                            <constraint firstItem="gVC-B5-Vyk" firstAttribute="top" secondItem="BxI-K5-zWl" secondAttribute="bottom" constant="86" id="dCj-SJ-fLo"/>
                             <constraint firstItem="OC7-3B-APr" firstAttribute="centerY" secondItem="EAE-BR-6TD" secondAttribute="centerY" constant="70" id="iSO-Gf-O3h"/>
-                            <constraint firstItem="gVC-B5-Vyk" firstAttribute="leading" secondItem="bFx-Te-ssY" secondAttribute="leading" constant="50" id="nYU-uA-cp3"/>
+                            <constraint firstItem="gVC-B5-Vyk" firstAttribute="leading" secondItem="EAE-BR-6TD" secondAttribute="leading" constant="50" id="nYU-uA-cp3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bFx-Te-ssY"/>
                     </view>
                     <connections>
                         <outlet property="halfCircleView" destination="OC7-3B-APr" id="Lpt-gW-h2V"/>
